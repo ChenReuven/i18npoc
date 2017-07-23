@@ -8,7 +8,21 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+
+    "i18n-xmb": "ng xi18n -p src/tsconfig.app.json --i18nFormat=xmb",
+    "i18n-xlf2": "ng xi18n -p src/tsconfig.app.json --i18nFormat=xlf2",
+    "i18n": "ng xi18n -p src/tsconfig.app.json --i18nFormat=xlf",
+
+    "i18n-en": "ng xi18n --out-file=locale/messages.en.xlf --i18nFormat=xlf --local en",
+    "i18n-he": "ng xi18n --out-file=locale/messages.he.xlf --i18nFormat=xlf --local he",
+    "i18n-es": "ng xi18n --out-file=locale/messages.es.xlf --i18nFormat=xlf --local es",
+
+    "i18n-build": "ng build --aot --locale en --out-file src/locale/messages.xlf --i18n-format xlf",
+
+    "i18n-start-en": "ng serve --aot --locale en --i18n-file src/locale/messages.en.xlf --i18n-format xlf",
+    "i18n-start-he": "ng serve --aot --locale he --i18n-file src/locale/messages.he.xlf --i18n-format xlf",
+    "i18n-start-es": "ng serve --aot --locale es --i18n-file src/locale/messages.es.xlf --i18n-format xlf"
   },
   "private": true,
   "dependencies": {
